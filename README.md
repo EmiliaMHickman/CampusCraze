@@ -27,8 +27,8 @@ Brief description of your project goes here. Explain what problem your project s
 Provide instructions on how to get a copy of your project up and running on the local machine.
 
 ```bash
-git clone https://github.com/mzskhan626/bric-braniaca.git
-cd bric-braniaca
+git clone https://github.com/mzskhan626/CampusCraze
+cd CampusCraze
 # Additional setup instructions
 
 ```

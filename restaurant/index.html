@@ -17,35 +17,74 @@
 	</form>
 	<h2> Must Try </h2>
 		<ul class='list'>
-
-			<li>
-				<input type="checkbox" name="item">
-				<span class="item-text">Panda Express</span>
-				<a href="https://www.pandaexpress.com/"></a> <a class="delete-link">&#10006;</a>
-			</li>
-			
-			<script>
-				document.querySelector('.item-text').addEventListener('click', function (event) {
-					// You can replace "your_link_here" with the actual URL you want to use
-					var url = "https://www.pandaexpress.com/";
-					window.location.href = url;
-				});
-			</script>
-
-
 			<li><input type="checkbox" name="item"> Carl's Jr <a href="#">&#10006;</a></li>
 			<li><input type="checkbox" name="item"> Fresh escape <a href="#">&#10006;</a></li>
 			<li><input type="checkbox" name="item"> food <a href="#">&#10006;</a></li>
 			<li><input type="checkbox" name="item"> sushiBar <a href="#">&#10006;</a></li>
 		</ul>	
-	<h2> Less Try </h2>
+	<h2> Favorites </h2>
 		<ul class='list'>
 			<li><input type="checkbox" name="item" checked>Chicken<a href="#">&#10006;</a></li>
 			<li><input type="checkbox" name="item" checked> Pony Express <a href="#">&#10006;</a></li>
 			<li><input type="checkbox" name="item" checked> Cheese <a href="#">&#10006;</a></li>
 			<li><input type="checkbox" name="item" checked> Apples <a href="#">&#10006;</a></li>
 		</ul>
-	
+		<div class="Microwaves">
+			<h2>Microwaves on Campus:</h2>
+			<div class="row addItemRow">
+				<input type="text" id="input-box" placeholder="Add your text">
+				<button onclick="addTask()">Add</button>
+			</div>
+			<ul id="list-container">
+				
+			</ul>
+		</div>
+
+
+	<script>
+		const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
+
+inputBox.addEventListener('keyup', (event) => {
+    if(event.key ==='Enter'){
+        addTask()
+    }
+})
+
+function addTask(){
+    if(inputBox.value === ''){
+        alert("You must write something!");
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+    }
+    inputBox.value = "";
+    saveData();
+}
+
+listContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        saveData();
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        saveData();
+    }
+},false);
+
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();
+	</script>
 </body>
 </html>
-

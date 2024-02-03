@@ -26,6 +26,33 @@
                 });
             });
         </script>
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+    
+            .split-container {
+                display: flex;
+                height: 100vh; /* 100% of the viewport height */
+            }
+    
+            .split-half {
+                flex: 1;
+                padding: 20px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+    
+            /* Optional: Add some styling for better visibility */
+            .left-half {
+                background-color: #f5f5f5;
+            }
+    
+            .right-half {
+                background-color: #fff;
+            }
+        </style>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark"style=" background-color: rgb(48,69,41); color:white;" >
@@ -57,25 +84,34 @@
                         <div class="nav">
                             
                             <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-house fa-2x"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-house fa-3x"></i></div>
                                 Dashboard
                             </a>
                                <a class="nav-link" href="restaurant/index.html" target="_blank">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-utensils fa-2x"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-utensils fa-3x"></i></div>
                              restaurant Plans
                             </a>
                             <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-calendar-days fa-2x"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-calendar-days fa-3x"></i></div>
                               Class Info
                             </a>
                             <a class="nav-link" href="faviourate study area/index.html" target="_blank">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-school fa-2x"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-school fa-3x"></i></div>
                                 Fav Study Areas
                             </a>
                             <a class="nav-link" href="https://www.cpp.edu/maps/" target="_blank">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-map fa-2x"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-map fa-3x"></i></div>
                               Google Maps
                             </a>
+                            <a class="nav-link" href="Sillystuff/index.html" target="_blank">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-face-grin-tongue-wink fa-3x"></i></i></div>
+                               Silly stuff
+                            </a>
+                            <a class="nav-link" href="Resume Builder/index.html" target="_blank">
+                                <div class="sb-nav-link-icon"> <i class="fa-solid fa-file fa-3x"></i></div>
+                                Resume Builder
+                            </a>
+
                             <div class="sb-sidenav-menu-heading">
                             </div>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
@@ -189,6 +225,21 @@
                                     </div>
                                   </div>
                             </div>
+                        </div>
+<br><br><br>
+                        <div class="split-container">
+                            <div class="split-half left-half">
+                                <!-- Content for the left half goes here -->
+                            
+                                <h2>Left Half</h2>
+                                <p>This is the left side of the screen.</p>
+                            </div>
+                            <br><br>
+                            <div class="split-half right-half">
+                                <!-- Content for the right half goes here -->
+                                <h2>Right Half</h2>
+                                <p>This is the right side of the screen.</p>
+                        
                         </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
