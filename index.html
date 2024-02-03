@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+        <link rel="icon" href="assets/img/cpp.jpg" type="image/jpg" style="height: 85px; width: 95px" />
         <title>CampusCraze </title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
@@ -28,42 +29,50 @@
             });
         </script>
         <style>
+            
             body, html {
                 height: 100%;
                 margin: 0;
                 font-family: 'Poppins', sans-serif;
                 background-color: #f8f9fa;
             }
-    
+        
             .split-container {
                 display: flex;
-                height: 100vh;
+                flex-direction: column; /* Change to column layout for small screens */
                 background-color: #fff;
                 border-radius: 15px;
                 overflow: hidden;
             }
-    
+        
             .split-half {
                 flex: 1;
-                padding: 50px;
+                padding: 20px; /* Adjust padding for smaller screens */
                 box-sizing: border-box;
             }
-    
-            .left-half {
-                background-color: #3498db;
-                color: #fff;
-                border-top-left-radius: 15px;
-                border-bottom-left-radius: 15px;
-                margin-right: 10px;
+        
+            .left-half, .right-half {
+                border-radius: 0; /* Remove border radius for smaller screens */
+                margin: 0;
             }
-    
-            .right-half {
-                position: relative;
-                background-color: #ecf0f1;
-                border-top-right-radius: 15px;
-                border-bottom-right-radius: 15px;
-                margin-left: auto;
-                padding: 50px;
+        
+            /* ... (other existing styles) ... */
+        
+            @media (max-width: 768px) {
+                /* Media query for screens smaller than or equal to 768px width */
+                .split-half {
+                    padding: 10px; /* Adjust padding for smaller screens */
+                }
+        
+                .split-half .left-half {
+                    width: 100%; /* Make the calendar take up full width on smaller screens */
+                    margin-right: 0; /* Remove margin on smaller screens */
+                }
+        
+                .split-half iframe {
+                    width: 100%; /* Make the iframe take up full width on smaller screens */
+                    height: 300px; /* Adjust height as needed */
+                }
             }
     
             .right-half h2, .right-half h3 {
@@ -179,6 +188,8 @@
             #todo-list .delete-btn:hover {
                 background-color: #c82333;
             }
+            
+            
         </style>
     </head>
     <body class="sb-nav-fixed">
@@ -218,7 +229,7 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-utensils fa-3x"></i></div>
                              restaurant Plans
                             </a>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="classinfo.html" target="_blank">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-calendar-days fa-3x"></i></div>
                               Class Info
                             </a>
@@ -284,14 +295,17 @@
                       
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
+                                <a href="classinfo.html" target="_blank">
                                 <div class="card">
                                     <div class="card-body">
                                       <h5 class="card-title">MAT1150</h5>
                                       <p class="card-text">Calc 2.</p>
                                     </div>
                                   </div>
+                                </a>
                             </div>
                             <div class="col-xl-3 col-md-6">
+                                <a href="classinfo.html" target="_blank">
                                 <div class="card">
                                     <div class="card-body">
                                       <h5 class="card-title">CS 3560 </h5>
@@ -299,9 +313,11 @@
                                     </div>
                                   </div>
                                 </div>
+                            </a>
                             </div>    
                             <div class="row">    
                             <div class="col-xl-3 col-md-6" class="dropdown">
+                                <a href="classinfo.html" target="_blank">
                                 <div class="card">
                                     <div class="card-body">
                                       <h5 class="card-title">CS 4650 </h5>
@@ -309,8 +325,10 @@
                                     
                                     </div>
                                   </div>
+                                </a>
                             </div>
                             <div class="col-xl-3 col-md-6">
+                                <a href="classinfo.html" target="_blank">
                                 <div class="card">
                                     <div class="card-body">
                                       <h5 class="card-title">CS 3750</h5>
@@ -318,6 +336,7 @@
 
                                     </div>
                                   </div>
+                                </a>
                             </div>
                         </div>
 <br><br><br>
@@ -326,13 +345,13 @@
                                 <!-- Content for the left half goes here -->
                             
                                 <h2>Calendar</h2>
-                                <iframe src="https://calendar.google.com/calendar/embed?src=3c3086b2f02ed91ab3982e12295e52c58e2fd01927c76d37b2cd1766fd58ef6e%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+                                <iframe src="https://calendar.google.com/calendar/embed?src=3c3086b2f02ed91ab3982e12295e52c58e2fd01927c76d37b2cd1766fd58ef6e%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="400" frameborder="0" scrolling="no"></iframe>
                                 
                             </div>
-                            <br><br><br><br><br><br><br><br><br><br>
-                            <div class="split-half right-half">
+                            
+                            <div class="split-half right-half" style="border-radius: 25px;">
                                 <!-- Content for the right half goes here -->
-                                <h2>To-Do List</h2>
+                                <h2 id="todo">To-Do List</h2>
                                 <ul id="todo-list">
                                     <!-- Existing tasks will be added here dynamically -->
                                     <!-- Prepopulate the list with default tasks -->

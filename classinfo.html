@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Class Info</title>
+</head>
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    .card {
+        transition: transform 0.3s;
+        background-color: lightblue;
+    }
+    .navbar {
+        background-color: #007bff;
+    }
+
+    .navbar-brand,
+    .navbar-text {
+        color: #fff;
+    }
+    footer {
+        background-color: #343a40;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Custom styles for the modal */
+    .modal-content {
+        border-radius: 10px;
+    }
+
+    .modal-header {
+        background-color: #007bff;
+        color: #fff;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #dee2e6;
+    }
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">My Class Info</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" style="background-color: #343a40; color: #fff">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- Course Card (Repeat for other courses) -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">MAT1150</h5>
+                        <p class="card-text">Calculus 2</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mat1150Modal1">
+                            View Details
+                        </button>
+                        <!-- Additional details modal -->
+                        <div class="modal fade" id="mat1150Modal1" tabindex="-1" role="dialog" aria-labelledby="mat1150ModalLabel1" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="mat1150ModalLabel1">MAT1150 Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Professor: Emily</p>
+                                        <p>Building: <a href="https://www.cpp.edu/maps/?id=1130#!m/276186" target="_blank">Building 8: College of Science</a></p>
+                                        <p>Email: <a href="mailto:emily1@gmail.com">emily1@gmail.com</a></p>
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!-- Add more buttons if needed -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">CS 3560</h5>
+                        <p class="card-text">ObjectOriented Programming</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mat1150Modal2">
+                            View Details
+                        </button>
+                        <!-- Additional details modal -->
+                        <div class="modal fade" id="mat1150Modal2" tabindex="-1" role="dialog" aria-labelledby="mat1150ModalLabel2" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="mat1150ModalLabel2">CS 3560</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Professor: Benjamin</p>
+                                        <p>Building: <a href="https://www.cpp.edu/maps/?id=1130#!m/276187" target="_blank">Building 9: College of Engineering</a></p>
+                                        <p>Email: <a href="mailto:ben@gmail.com">ben@gmail.com</a></p>
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!-- Add more buttons if needed -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">CS 4650</h5>
+                        <p class="card-text">Big Data Analytics</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mat1150Modal3">
+                            View Details
+                        </button>
+                        <!-- Additional details modal -->
+                        <div class="modal fade" id="mat1150Modal3" tabindex="-1" role="dialog" aria-labelledby="mat1150ModalLabel3" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="mat1150ModalLabel3">CS 4650</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Professor: Sophia</p>
+                                        <p>Building: <a href="https://www.cpp.edu/maps/?id=1130#!m/276462" target="_blank">Building 162: College of Business Administration</a></p>
+                                        <p>Email: <a href="mailto:soph23@gmail.com">soph23@gmail.com</a></p>
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!-- Add more buttons if needed -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">CS 3750</h5>
+                        <p class="card-text">Computers and Society</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mat1150Modal4">
+                            View Details
+                        </button>
+                        <!-- Additional details modal -->
+                        <div class="modal fade" id="mat1150Modal4" tabindex="-1" role="dialog" aria-labelledby="mat1150ModalLabel4" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="mat1150ModalLabel4">CS 3750</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Professor: Ava</p>
+                                        <p>Building: <a href="https://www.cpp.edu/maps/?id=1130#!m/276186" target="_blank">Building 8: College of Science</a></p>
+                                        <p>Email: <a href="mailto:ava96@gmail.com">ava96@gmail.com</a></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!-- Add more buttons if needed -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <footer>
+        &copy; 2024 My Class Info. All rights reserved.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
