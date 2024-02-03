@@ -290,8 +290,20 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Home Page</h1>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h1 class="mt-4">Home Page</h1>
+                        </div>
+                        <div class="col-md-3 text-right">
+                            <div class="mb-4" style="margin-top: 10px; margin-bottom: 10px;">
+                                <a href="#todo" class="btn btn-primary" style="background-color: #28a745; border-color: #28a745;">To List</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
                       
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
@@ -352,6 +364,11 @@
                             <div class="split-half right-half" style="border-radius: 25px;">
                                 <!-- Content for the right half goes here -->
                                 <h2 id="todo">To-Do List</h2>
+                                <form id="add-task-form">
+                                    <label for="new-task">New Task:</label>
+                                    <input type="text" id="new-task" required>
+                                    <button type="button" onclick="addTask()">Add Task</button>
+                                </form>
                                 <ul id="todo-list">
                                     <!-- Existing tasks will be added here dynamically -->
                                     <!-- Prepopulate the list with default tasks -->
@@ -361,11 +378,6 @@
                                 </ul>
                             
                                 <!-- Add Task Form -->
-                                <form id="add-task-form">
-                                    <label for="new-task">New Task:</label>
-                                    <input type="text" id="new-task" required>
-                                    <button type="button" onclick="addTask()">Add Task</button>
-                                </form>
                             
                                 <script>
                                     function addTask() {
