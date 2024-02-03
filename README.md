@@ -44,6 +44,10 @@ Navigate campus like a pro! The integrated Google Maps feature helps you find ev
 
 Ready to impress? The Resume Builder Wizard lets you effortlessly create a stunning resume. Showcase your achievements and skills – get ready to land that dream job!
 
+### 8. AI Image Generator 🤖🖼️
+
+Embrace new technology! Our AI Image Generator allows you to generate unique and creative images. Stay engaged with the latest innovations and add a touch of futuristic flair to your projects.
+
 ## Technologies Used
 
 - HTML
@@ -51,6 +55,7 @@ Ready to impress? The Resume Builder Wizard lets you effortlessly create a stunn
 - JavaScript
 - React.js
 - Node.js
+- API
 
 ## Getting Started
 
